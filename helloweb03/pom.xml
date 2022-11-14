@@ -14,7 +14,6 @@
 		<maven.compiler.source>12</maven.compiler.source>
 		<maven.compiler.target>12</maven.compiler.target>
 		<org.springframework-version>4.3.4.RELEASE</org.springframework-version>
-		<org.springframework>4.3.4.RELEASE</org.springframework>
 	</properties>
 	
 	<dependencies>
@@ -23,6 +22,20 @@
 		    <groupId>org.springframework</groupId>
 		    <artifactId>spring-context</artifactId>
 		    <version>${org.springframework-version}</version>
+		</dependency>
+		
+	<!-- Spring MVC -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>		
+		
+	<!-- Spring Web -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${org.springframework-version}</version>
 		</dependency>
 
 	<!-- jtlel -->
