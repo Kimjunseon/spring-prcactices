@@ -13,9 +13,18 @@
 		<project.build.outputEncoding>UTF-8</project.build.outputEncoding>
 		<maven.compiler.source>12</maven.compiler.source>
 		<maven.compiler.target>12</maven.compiler.target>
+		<org.springframework-version>4.3.4.RELEASE</org.springframework-version>
+		<org.springframework>4.3.4.RELEASE</org.springframework>
 	</properties>
 	
 	<dependencies>
+	<!-- Spring Context(Container) -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-context</artifactId>
+		    <version>${org.springframework-version}</version>
+		</dependency>
+
 	<!-- jtlel -->
 		<dependency>
 		    <groupId>jstl</groupId>
@@ -27,7 +36,7 @@
 	
 
 	<build>
-		<finalName>mysite02</finalName>
+		<finalName>helloweb03</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
