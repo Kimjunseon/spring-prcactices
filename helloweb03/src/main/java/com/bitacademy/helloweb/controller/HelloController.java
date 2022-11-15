@@ -15,7 +15,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class HelloController {
 	
 	public void a(){
-		
+
 	}
 	
 	@RequestMapping("/hello")
