@@ -2,6 +2,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<% pageContext.setAttribute("newLine", "\n"); %>
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -18,26 +20,25 @@
 				<td colspan=4><textarea name="contents" cols=60 rows=5></textarea></td>
 			</tr>
 			<tr>
-				<td colspan=4 align=right><input type="submit" VALUE=" 확인 "></td>
-			</tr>		
+				<td colspan=4 align=right><input type="submit" value="등록"></td>
+			</tr>
 		</table>
 	</form>
-
 	
-	<c:forEach var="vo" items="${list }" varStatus="vs">
+	<c:set var="count" value="${fn:length(list)}" />
+	<c:forEach var="vo" items="${list }" varStatus="status">
 		<br>
-		<table width=510 border=1>
+		<table width="510" border="1">
 			<tr>
-				<td>${list.size() - vs.index }</td>
+				<td>[${count-status.index }]</td>
 				<td>${vo.name }</td>
 				<td>${vo.regDate }</td>
-				<td><a href="${pageContext.request.contextPath }/deleteform?no=${vo.no }">삭제</a></td>
+				<td><a href="${pageContext.request.contextPath }/delete/${vo.no }">삭제</a></td>
 			</tr>
 			<tr>
-				<td colspan=4>${vo.contents }</td>
+				<td colspan=4>${fn:replace(vo.contents, newLine, "<br/>") }</td>
 			</tr>
 		</table>
-		</c:forEach>
-
+	</c:forEach>	
 </body>
 </html>

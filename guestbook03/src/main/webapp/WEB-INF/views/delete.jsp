@@ -8,8 +8,7 @@
 <title>방명록</title>
 </head>
 <body>
-	<form action="${pageContext.request.contextPath }/delete" method="post">
-		<input type='hidden' name="no" value="${param.no}">
+	<form action="${pageContext.request.contextPath }/delete/${no }" method="post">
 		<table>
 			<tr>
 				<td>
