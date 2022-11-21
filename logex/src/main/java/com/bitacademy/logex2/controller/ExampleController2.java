@@ -22,11 +22,11 @@ public class ExampleController2 {
 		/**
 		 *  이 예제에서는 logback.xml 에서,
 		 *  
-		 *  1. fileAppender2 와 "com.douzone.logexample2" logger 를 살펴 보아야 합니다.
+		 *  1. fileAppender2 와 "com.bitacademy.logex2" logger 를 살펴 보아야 합니다.
 		 *  
 		 *  2. fileAppender2 에서는 /logex/logex2.log 로그파일 지정과
 		 *  
-		 *  3. 50KB 가 넘었을 때, /logex/logex2.i.log.zip 으로 압축되고 새로 
+		 *  3. 50KB 가 넘었을 때, /logex/logex2.i.log.zip 으로 압축되고
 		 *     logex2.log 파일이 생성되는 것을 확인해 봐야 합니다.
 		 *    
 		 *  4. 새로운 로거를 세팅하고 있습니다.
