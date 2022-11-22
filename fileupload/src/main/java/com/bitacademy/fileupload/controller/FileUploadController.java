@@ -8,12 +8,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.bitacademy.fileupload.service.FileUploadService;
-	
+
 @Controller
 public class FileUploadController {
 	@Autowired
-	private FileUploadService fileuploadService;
-	
+	private FileUploadService fileUploadService;
 	
 	@RequestMapping("/form")
 	public String form() {
@@ -25,9 +24,12 @@ public class FileUploadController {
 			@RequestParam("email") String email,
 			@RequestParam("file") MultipartFile multipartFile,
 			Model model) {
-		System.out.println(email);
-		String url = fileuploadService.restore(multipartFile);
+		System.out.println("email:" + email);
+		
+		String url = fileUploadService.restore(multipartFile);
+		
 		model.addAttribute("url", url);
 		return "/WEB-INF/views/result.jsp";
 	}
+	
 }
