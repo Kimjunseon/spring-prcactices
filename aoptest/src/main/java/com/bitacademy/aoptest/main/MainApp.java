@@ -1,10 +1,10 @@
-package main;
+package com.bitacademy.aoptest.main;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import Vo.ProductVo;
-import service.ProductService;
+import com.bitacademy.aoptest.service.ProductService;
+import com.bitacademy.aoptest.vo.ProductVo;
 
 public class MainApp {
 
@@ -14,7 +14,6 @@ public class MainApp {
 		ProductService ps = ac.getBean(ProductService.class);
 		ProductVo vo = ps.find("TV");
 		System.out.println(vo);
-
 	}
 
 }
