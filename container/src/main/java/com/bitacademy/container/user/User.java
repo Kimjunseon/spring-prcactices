@@ -1,9 +1,12 @@
 package com.bitacademy.container.user;
 
+import java.util.List;
+
 public class User {
 	private Long no = 0L;
 	private String name = "마이콜";
 	private Friend friend;
+	private List<String> friends;
 				
 	public User() {
 	}
@@ -28,9 +31,13 @@ public class User {
 	public void setFriend(Friend friend) {
 		this.friend = friend;
 	}
+	
+	public void setFriends(List<String> friends) {
+		this.friends = friends;
+	}
 
 	@Override
 	public String toString() {
-		return "User [no=" + no + ", name=" + name + ", friend=" + friend + "]";
+		return "User [no=" + no + ", name=" + name + ", friend=" + friend + ", friends=" + friends + "]";
 	}
 }
