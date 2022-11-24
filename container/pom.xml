@@ -25,7 +25,7 @@
 		</dependency>
 		
 		<bulid>
-			<finalName>aoptest</finalName>
+			<finalName>container</finalName>
 		</bulid>
 		
 	</dependencies>
