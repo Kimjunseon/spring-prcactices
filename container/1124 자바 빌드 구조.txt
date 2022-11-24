@@ -68,5 +68,9 @@ user: xml, javaconfig (O)
 				|- applicationContext01.xml	
 				|- applicationContext02.xml	
 
+TDD
+Test Driven Development
+
+
 com.bitacademy.container.soundsystem	: java config /xml config:auto	
 com.bitacademy.container.videosystem	: xml config /xml config:explicity
