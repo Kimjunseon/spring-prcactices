@@ -34,17 +34,6 @@
   	</dependencies>
   	<build>
 		<finalName>aoptest</finalName>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.tomcat.maven</groupId>
-				<artifactId>tomcat7-maven-plugin</artifactId>
-				<version>2.2</version> 
-				<configuration>
-					<url>${tomcat.deploy.url}</url>
-					<server>tomcat-bitacademy</server>
-				</configuration>
-			</plugin>
-		</plugins>
 	</build>
 	
 
